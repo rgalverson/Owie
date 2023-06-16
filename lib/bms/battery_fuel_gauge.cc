@@ -14,9 +14,9 @@ inline T clamp(T x, T lower, T upper) {
 int32_t openCircuitSocFromCellVoltage(int32_t cellVoltageMillivolts) {
   static constexpr int LOOKUP_TABLE_RANGE_MIN_MV = 2700;
   static constexpr int LOOKUP_TABLE_RANGE_MAX_MV = 4200;
-  static uint8_t LOOKUP_TABLE[31] = {0,  0,  0,  0,  1,  2,  3,  4,  5,  7,  8,
-                                     11, 14, 16, 18, 19, 25, 30, 33, 37, 43, 48,
-                                     53, 60, 67, 71, 76, 82, 92, 97, 100};
+  static uint8_t LOOKUP_TABLE[31] = {0,  0,  0,  1,  1,  2,  2,  3,  4,  5,  6,
+                                     8, 10, 12, 14, 19, 24, 28, 34, 40, 45, 51,
+                                     57, 64, 71, 76, 82, 93, 99, 99, 100};
   static constexpr int32_t LOOKUP_TABLE_SIZE =
       (sizeof(LOOKUP_TABLE) / sizeof(*LOOKUP_TABLE));
   static constexpr int32_t RANGE =
